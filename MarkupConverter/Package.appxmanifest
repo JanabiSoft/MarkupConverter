@@ -4,18 +4,19 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap mp rescap">
 
   <Identity
-    Name="d80ad577-1e1e-49db-88b8-9a58d93c18bf"
+    Name="janabisoft.markupConverter"
     Publisher="CN=janab"
-    Version="1.0.0.0" />
+    Version="0.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="d80ad577-1e1e-49db-88b8-9a58d93c18bf" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>MarkupConverter</DisplayName>
-    <PublisherDisplayName>janab</PublisherDisplayName>
+    <PublisherDisplayName>JanabiSoft</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,18 +33,21 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="MarkupConverter.App">
       <uap:VisualElements
-        DisplayName="MarkupConverter"
+        DisplayName="Markup Converter"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="MarkupConverter"
+        Description="Convert between differenr markup languages"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
   </Applications>
 
   <Capabilities>
     <Capability Name="internetClient" />
+    <rescap:Capability Name="broadFileSystemAccess" />
+    <uap:Capability Name="removableStorage"/>
   </Capabilities>
 </Package>
