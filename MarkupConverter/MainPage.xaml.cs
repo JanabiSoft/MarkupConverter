@@ -32,11 +32,6 @@ namespace MarkupConverter
         StorageFolder SourceFolder;
         StorageFolder DestinationFolder;
 
-        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private async void BT_Source_Click(object sender, RoutedEventArgs e)
         {
             //select source folder

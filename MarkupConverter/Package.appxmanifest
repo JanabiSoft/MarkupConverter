@@ -10,7 +10,7 @@
   <Identity
     Name="janabisoft.markupConverter"
     Publisher="CN=janab"
-    Version="0.1.0.0" />
+    Version="0.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="d80ad577-1e1e-49db-88b8-9a58d93c18bf" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
